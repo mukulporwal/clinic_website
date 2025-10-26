@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+
+<header class="  text-center py-5" style="background-color: rgba(212, 228, 91, 0.367);">
+    <h1>Endometriosis</h1>
+  </header>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mt-5 mb-4">
+                <h2 class="text-start  mb-4" style="color: darkslateblue; ">{{endo.name}}</h2>
+                <p style="font-size: 18px; text-align: justify; width: 95%; line-height: 35px;">{{endo.description}}</p>
+            </div>
+            <div class="col-lg-6 col-md-12 mt-5 mb-4">
+                <img src="{{endo.image.url}}" alt="" width="95%" height="400px">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}

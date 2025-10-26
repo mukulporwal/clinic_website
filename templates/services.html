@@ -1,0 +1,68 @@
+{% include 'header.html' %}
+
+<header class="  text-center py-5" style="background-color: rgba(212, 228, 91, 0.367);">
+    <h1>Our Services</h1>
+  </header>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center mt-5 mb-4" style="color: darkslateblue; margin-top: 20px;">Fertility</h1>
+            {% for f in ferservices %}
+            <div class="col-md-3 mt-4 mb-4 d-flex justify-content-center">
+                <div class="card medical-card" style="width: 90%; border: 2px solid rgba(0, 0, 139, 0.508); ">
+                    <img src="{{f.image.url}}"  alt="" width="100%" >
+                    <div class="card-img-overlay d-flex align-items-end">
+                        <a href="/fertility/{{f.id}}"><button class="btn btn-light" style="color: darkblue; font-size: 20px;">{{f.btnname}}</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="row d-flex justify-content-evenly">
+            <h1 class="text-center mt-5 mb-4" style="color: darkslateblue; margin-top: 20px;">Endometriosis</h1>
+            {% for e in endoservices %}
+            <div class="col-md-3  mt-4 mb-4 ">
+                <div class="card medical-card" style="width: 90%; border: 2px solid rgba(0, 0, 139, 0.508); ">
+                    <img src="{{e.image.url}}"  alt="" width="100%" >
+                    <div class="card-img-overlay d-flex align-items-end">
+                        <a href="/endometriosispage/{{e.id}}"><button class="btn btn-light" style="color: darkblue; font-size: 20px;">{{e.btnname}}</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <h1 class="text-center mt-5 mb-4" style="color: darkslateblue; margin-top: 20px;">Laparoscopy</h1>
+            {% for l in lapaservices %}
+            <div class="col-md-3 mt-4 mb-4 d-flex justify-content-center">
+                <div class="card medical-card" style="width: 90%; border: 2px solid rgba(0, 0, 139, 0.508); ">
+                    <img src="{{l.image.url}}"  alt="" width="100%" >
+                    <div class="card-img-overlay d-flex align-items-end">
+                        <a href="/laparoscopypage/{{l.id}}"><button class="btn btn-light" style="color: darkblue; font-size: 20px;">{{l.btnname}}</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row  d-flex justify-content-evenly">
+            <h1 class="text-center mt-5 mb-4" style="color: darkslateblue; margin-top: 20px;">High Risk Delivery</h1>
+            {% for r in highdelservices %}
+            <div class="col-md-3  mt-4 mb-4 ">
+                <div class="card medical-card" style="width: 90%; border: 2px solid rgba(0, 0, 139, 0.508); ">
+                    <img src="{{r.image.url}}"  alt="" width="100%" >
+                    <div class="card-img-overlay d-flex align-items-end">
+                        <a href="/riskdeliverypage/{{r.id}}"><button class="btn btn-light" style="color: darkblue; font-size: 20px;">{{r.btnname}}</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% include 'footer.html' %}
