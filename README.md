@@ -13,8 +13,9 @@ This project helps manage patients, doctors, appointments, and medical records e
 ---
 
 ## 🛠️ Tech Stack
-**Frontend:** HTML, CSS, Bootstrap  
+**Frontend:** HTML, CSS, Js, Bootstrap  
 **Backend:** Python, Django  
 **Database:** SQLite3  
 
 ---
+
